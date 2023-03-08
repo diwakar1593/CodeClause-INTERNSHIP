@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
-
+import java.util.*;
 public class pdf_Splitter{
     public static void main(String[] args) {
         try{
