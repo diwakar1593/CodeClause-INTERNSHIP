@@ -3,17 +3,17 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.util.*;
-public class pdf_Splitter{
+public class PDFSplitter{
     public static void main(String[] args) {
         try{
-            byte b[] = new byte[1000000];
-            int x=1, j=0;
-            String s = "";
-            InputStreamReader ins = new InputStreamReader(System.in);
-            BufferedReader br = new BufferedReader(ins);
-            System.out.println("Enter Path of File : ");
-            String path = br.readLine();
-            FileInputStream fis = new FileInputStream(path);
+            byte b[]=new byte[1000000];
+            int x=1,j=0;
+            String s="";
+            InputStreamReader ins=new InputStreamReader(System.in);
+            BufferedReader br=new BufferedReader(ins);
+            System.out.println("Enter Path of Source or Original File : ");
+            String path=br.readLine();
+            FileInputStream fis=new FileInputStream(path);
             int read_bytes;
             while(fis.available()!=0){
                 j=0;
@@ -24,7 +24,7 @@ public class pdf_Splitter{
                 else{
                     s=path+".0"+x;
                 }
-                FileOutputStream  fos = new FileOutputStream(s);
+                FileOutputStream fos=new FileOutputStream(s);
                 while(j<=50000000 && fis.available()!=0){
                     read_bytes=fis.read(b,0,1000000);
                     j=j+read_bytes;
@@ -33,11 +33,11 @@ public class pdf_Splitter{
                 System.out.println("Part "+x+" Created.");
                 x++;
             }
-            System.out.println("File Splitted Successfully...!!!");
+            System.out.println("File splitted successfully....!!!");
             fis.close();
         }
-        catch(Exception e){
-            e.printStackTrace();
-        }
+    catch(Exception e){
+    e.printStackTrace();
+    }
     }
 }
