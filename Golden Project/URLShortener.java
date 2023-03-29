@@ -1,8 +1,5 @@
-
-
 import java.util.HashMap;
 import java.util.Random;
-
 public class URLShortener {
 	// storage for generated keys
 	private HashMap<String, String> keyMap;
@@ -30,7 +27,6 @@ public class URLShortener {
 		}
 		domain = "http://fkt.in";
 	}
-
 	URLShortener(int length, String newDomain) {
 		this();
 		this.keyLength = length;
